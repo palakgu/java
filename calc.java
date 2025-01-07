@@ -1,26 +1,32 @@
+import java.util.Scanner;
 class Calculator {
 public static void main(String args[]){
 System.out.println("Welcome to the calculator");
 
-Scanner sc = new scanner(System.in);
-System.out.println("enter the numbers")
+Scanner sc = new Scanner(System.in);
+System.out.println("enter the numbers");
 int n = sc.nextInt();
 int m = sc.nextInt();
 System.out.println("enter the operation");
-char sign = sc.nextInt.charAt(0);
-int res;
+char sign = sc.next().charAt(0);
+double res;
 switch(sign){
 
 case '+' :  res = addition(n,m);
             System.out.println(res);
+             break;
  
 case '-' : res = subtraction(n,m);
-            
+           System.out.println(res); 
+           break;
 
-case '*' : multiplication(n,m);
+case '*' : res = multiplication(n,m);
+           System.out .println(res);
+           break;  
 
-case '/' : division(n,m);
-
+case '/' : res = division(n,m);
+           System .out.println(res);
+           break;   
 
 }
 
@@ -31,7 +37,7 @@ public static int addition(int a , int b){
 return a+b;
 }
 
-public static int subraction(int a, int b){
+public static int subtraction(int a, int b){
 return a-b;
 }
 public static int multiplication(int a , int b){
